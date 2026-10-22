@@ -1,0 +1,11 @@
+langchain
+langchain-core
+langchain-community
+langgraph
+langchain-google-genai
+python-dotenv
+faiss-cpu
+tiktoken
+fastapi
+uvicorn
+requests
