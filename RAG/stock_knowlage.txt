@@ -1,0 +1,174 @@
+Stock Market Knowledge Base
+1. What Is the Stock Market?
+The stock market is a marketplace where investors buy and sell shares of publicly listed companies. A stock represents partial ownership in a company. Stock prices fluctuate based on supply and demand, company performance, economic conditions, investor sentiment, and market news.
+
+2. What Is a Stock?
+A stock is a financial security that represents ownership in a company. Investors can potentially earn money through price appreciation and dividends. However, stock investments also carry the risk of losing money.
+
+3. Important Stock Market Terms
+Current Price: The latest available trading price of a stock.
+
+Opening Price: The price at which a stock begins trading during a trading session.
+
+Previous Close: The stock's closing price from the previous trading session.
+
+Day High: The highest price reached by a stock during the current trading session.
+
+Day Low: The lowest price reached by a stock during the current trading session.
+
+Market Capitalization: The total market value of a company's outstanding shares. It is calculated by multiplying the current share price by the number of outstanding shares.
+
+Volume: The number of shares traded during a specific period.
+
+Dividend: A portion of a company's profits distributed to eligible shareholders.
+
+P/E Ratio: The price-to-earnings ratio compares a company's share price with its earnings per share. It is commonly used to evaluate stock valuation.
+
+EPS: Earnings per share represents the portion of a company's profit allocated to each outstanding share.
+
+4. Types of Stock Analysis
+Fundamental Analysis
+Fundamental analysis evaluates a company's financial health, business performance, profitability, revenue growth, debt, and valuation. Investors use it to estimate the long-term value of a company.
+
+Important metrics include revenue, net profit, earnings per share, P/E ratio, debt-to-equity ratio, and dividend yield.
+
+Technical Analysis
+Technical analysis studies historical price movements, trading volume, and chart patterns to identify possible future price movements.
+
+Common indicators include the Relative Strength Index (RSI), Moving Average Convergence Divergence (MACD), 50-day moving average, and 200-day moving average.
+
+Sentiment Analysis
+Sentiment analysis evaluates market participants' attitudes toward a stock using news, company announcements, analyst opinions, and investor discussions. Positive sentiment may support buying interest, while negative sentiment may increase selling pressure.
+
+5. Stock Market Trends
+Bullish Trend: A market condition in which prices generally move upward, indicating increasing buying interest.
+
+Bearish Trend: A market condition in which prices generally move downward, indicating selling pressure.
+
+Sideways Trend: A market condition in which prices move within a relatively narrow range without a clear upward or downward direction.
+
+A trend does not guarantee future price movement.
+
+6. Stock Recommendations
+Buy: An assessment that a stock may offer an attractive investment opportunity based on the available analysis.
+
+Hold: An assessment that maintaining an existing position may be reasonable, depending on the investor's goals and risk tolerance.
+
+Sell: An assessment that reducing or closing a position may be appropriate based on the analysis.
+
+Strong Buy: A particularly positive assessment supported by multiple favorable factors. This is not a guarantee of profit.
+
+Strong Sell: A particularly negative assessment suggesting significant concerns about the stock's outlook.
+
+Recommendations should consider valuation, business fundamentals, market conditions, investment horizon, and risk tolerance.
+
+7. Risk Management
+Risk management helps investors control potential losses and make informed investment decisions.
+
+Stop Loss: A predetermined price level at which an investor intends to exit a position to limit losses. Execution price may differ from the specified level.
+
+Target Price: An estimated future price based on an analysis or valuation method. It is not a guaranteed outcome.
+
+Risk-Reward Ratio: A comparison between the potential loss and potential profit of a trade. For example, risking ₹10 to potentially earn ₹20 gives a potential risk-reward ratio of 1:2.
+
+Diversification: Spreading investments across different companies, sectors, or asset classes to reduce concentration risk.
+
+Volatility: The degree to which a stock's price fluctuates over time. Higher volatility can mean larger price movements in either direction.
+
+8. Investment Time Horizons
+Intraday Trading: Buying and selling stocks within the same trading day.
+
+Short-Term Investing: Holding stocks for a relatively short period, such as several days, weeks, or months.
+
+Long-Term Investing: Holding stocks for multiple years to potentially benefit from business growth and long-term value creation.
+
+Different time horizons require different analysis methods and risk-management approaches.
+
+9. Fundamental Financial Metrics
+Revenue Growth: The percentage increase or decrease in a company's revenue over a specific period.
+
+Profit Margin: The percentage of revenue remaining as profit after accounting for relevant expenses.
+
+Debt-to-Equity Ratio: A measure comparing a company's debt with shareholders' equity. Interpretation varies across industries.
+
+Free Cash Flow: Cash generated by a company after accounting for capital expenditures. It can help assess financial flexibility.
+
+Return on Equity (ROE): A measure of how efficiently a company generates profit relative to shareholders' equity.
+
+No single financial metric is sufficient to determine whether a stock is a good investment.
+
+10. Technical Indicators
+Relative Strength Index (RSI): A momentum indicator ranging from 0 to 100. Values above 70 are commonly considered overbought, while values below 30 are commonly considered oversold. These levels do not automatically signal a reversal.
+
+Moving Average: The average stock price over a specified period, often used to identify trends.
+
+MACD: An indicator that compares moving averages to assess momentum and possible trend changes.
+
+Support Level: A price area where buying interest has historically emerged.
+
+Resistance Level: A price area where selling pressure has historically emerged.
+
+Support and resistance levels are estimates, not guaranteed price barriers.
+
+11. Factors That Affect Stock Prices
+Stock prices can change due to company earnings, revenue growth, management decisions, industry competition, interest rates, inflation, government policies, global economic events, geopolitical developments, and investor sentiment.
+
+Unexpected news and changes in market liquidity can also cause significant price movements.
+
+12. Stock Analysis Process
+A systematic stock analysis can follow these steps:
+
+Identify the company, ticker symbol, and stock exchange.
+
+Obtain the latest available market price and verify its timestamp.
+
+Evaluate the company's financial performance and valuation.
+
+Review price trends and relevant technical indicators.
+
+Identify positive factors, negative factors, and key risks.
+
+Consider the investment horizon and investor risk tolerance.
+
+Estimate a target price and potential downside, where appropriate.
+
+Formulate a reasoned buy, hold, or sell assessment.
+
+Explain the conclusion and its uncertainties.
+
+13. Example of Structured Stock Analysis
+Stock Name: Example Ltd.
+
+Ticker Symbol: EXMPL
+
+Current Price: ₹500
+
+Analysis Period: Long-term
+
+Trend: Bullish
+
+Recommendation: Hold
+
+Target Price: ₹560
+
+Stop Loss: ₹460
+
+Risk Level: Medium
+
+Analysis Summary: The company may have long-term growth potential based on the assumed financial and market conditions. However, investors should evaluate its valuation, profitability, debt, industry outlook, and downside risks before making an investment decision.
+
+This is a fictional example for educational purposes. It does not describe a real company or provide verified market data.
+
+14. Reliable Stock Data
+Stock analysis should use reliable and up-to-date data sources. Market prices, trading volume, financial statements, and corporate announcements should be verified using exchange publications, company investor-relations pages, or reputable financial-data providers.
+
+Every price should ideally include its currency, source, timestamp, and applicable exchange. Historical prices should not be presented as current prices.
+
+An AI model should not invent missing prices, financial ratios, or company information. When reliable data is unavailable, it should explicitly state that the information could not be verified.
+
+15. Limitations of Stock Predictions
+Stock analysis involves uncertainty. Historical performance does not guarantee future returns, technical indicators can produce false signals, and financial statements may not reflect future business conditions.
+
+AI-generated analysis can contain errors or outdated information. Investors should independently verify important figures and consider their financial objectives and risk tolerance before making investment decisions.
+
+This knowledge base is intended for educational purposes and does not constitute personalized financial advice.
