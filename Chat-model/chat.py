@@ -1,19 +1,30 @@
-# Ai chat bot with memory
-from langchain_core import chat_history
 from dotenv import load_dotenv
+from langchain_google_genai import ChatGoogleGenerativeAI
+from langchain_core.messages import HumanMessage, AIMessage
+
 load_dotenv()
 
-from langchain_google_genai import ChatGoogleGenerativeAI
+model = ChatGoogleGenerativeAI(
+    model="gemini-2.5-flash"
+)
 
-model = ChatGoogleGenerativeAI(model="gemini-2.5-flash")
-
-chatHistory = []
+chat_history = []
 
 while True:
 
-    user_prompt = input("You : ")
-    chatHistory.append(user_prompt)
-    response = model.invoke(chatHistory)
-    chatHistory.append(response.content)
-    print("AI : ",response.content)
+    user_input = input("You : ")
 
+    if user_input.lower() == "exit":
+        break
+
+    chat_history.append(
+        HumanMessage(content=user_input)
+    )
+
+    response = model.invoke(chat_history)
+
+    print("AI :", response.content)
+
+    chat_history.append(
+        AIMessage(content=response.content)
+    )
