@@ -3,31 +3,27 @@
   "rewrites": [
     {
       "source": "/api/(.*)",
-      "destination": "/frontend/api/index.py"
+      "destination": "/api/index.py"
     },
     {
       "source": "/chat",
-      "destination": "/frontend/api/index.py"
+      "destination": "/api/index.py"
     },
     {
       "source": "/health",
-      "destination": "/frontend/api/index.py"
+      "destination": "/api/index.py"
     },
     {
       "source": "/",
-      "destination": "/frontend/index.html"
+      "destination": "/public/index.html"
     },
     {
       "source": "/style.css",
-      "destination": "/frontend/style.css"
+      "destination": "/public/style.css"
     },
     {
       "source": "/script.js",
-      "destination": "/frontend/script.js"
-    },
-    {
-      "source": "/(.*)",
-      "destination": "/frontend/$1"
+      "destination": "/public/script.js"
     }
   ]
 }

@@ -1,5 +1,5 @@
 import os
-from fastapi import FastAPI, HTTPException, Response
+from fastapi import FastAPI, HTTPException, Response, Request
 from fastapi.responses import HTMLResponse
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
@@ -70,8 +70,6 @@ def get_frontend_file(filename: str):
 @app.get("/frontend", response_class=HTMLResponse)
 @app.get("/frontend/", response_class=HTMLResponse)
 @app.get("/frontend/index.html", response_class=HTMLResponse)
-@app.get("/api/index.py", response_class=HTMLResponse)
-@app.get("/frontend/api/index.py", response_class=HTMLResponse)
 async def serve_index():
     content = get_frontend_file("index.html")
     if content:
@@ -116,8 +114,6 @@ async def health():
 @app.post("/chat")
 @app.post("/frontend/chat")
 @app.post("/frontend/api/chat")
-@app.post("/api/index.py")
-@app.post("/frontend/api/index.py")
 async def chat(req: ChatRequest):
     global model
 
@@ -148,3 +144,29 @@ async def chat(req: ChatRequest):
         if chat_history and isinstance(chat_history[-1], HumanMessage):
             chat_history.pop()
         raise HTTPException(status_code=500, detail=str(e))
+
+
+@app.api_route("/api/index.py", methods=["GET", "POST"])
+@app.api_route("/frontend/api/index.py", methods=["GET", "POST"])
+async def vercel_endpoint_dispatcher(request: Request):
+    """Handle Vercel rewrites that route requests to index.py directly."""
+    matched = request.headers.get("x-matched-path", "")
+    full_url = str(request.url)
+
+    if "health" in matched or "health" in full_url:
+        return await health()
+
+    if request.method == "POST":
+        try:
+            body = await request.json()
+            return await chat(ChatRequest(**body))
+        except Exception as e:
+            raise HTTPException(status_code=400, detail=str(e))
+
+    if "style.css" in matched or "style.css" in full_url:
+        return await serve_style()
+    if "script.js" in matched or "script.js" in full_url:
+        return await serve_script()
+
+    return await serve_index()
+
