@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Build something Lovable</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Radial Gradient Background -->
+  <div class="bg-gradient"></div>
+
+  <div class="app-container">
+    <!-- Top Bar Navigation (Visible in Chat Mode) -->
+    <header class="top-bar" id="topBar">
+      <div class="top-title" id="newChatBtn" title="Start New Chat">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 5v14M5 12h14" />
+        </svg>
+        <span>New Chat</span>
+      </div>
+      <div class="badge-status">
+        <span id="backendStatus">AI Ready</span>
+      </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="main-content" id="mainContent">
+
+      <!-- Hero Header Section -->
+      <section class="hero-section" id="heroSection">
+        <h1 class="hero-title" id="editableTitle" contenteditable="false">Ask our AI anything</h1>
+        <p class="hero-subtitle" id="editableSubtitle" contenteditable="false">Bring a new Research, idea, analysis,
+          report, or any other thing to life.</p>
+      </section>
+
+      <!-- Chat Stream Messages (Active during conversation) -->
+      <section class="chat-container" id="chatContainer">
+        <!-- Messages will be injected dynamically here -->
+      </section>
+
+      <!-- Center / Floating Prompt Box Card -->
+      <section class="prompt-card-wrapper" id="promptWrapper">
+        <div class="prompt-card" id="promptCard">
+
+          <!-- Textarea Input Area -->
+          <div class="input-row">
+            <textarea id="promptInput" rows="1" placeholder="Ask me..."
+              autocomplete="off"></textarea>
+          </div>
+
+          <!-- Bottom Action Controls -->
+          <div class="action-row">
+            <!-- Left: Add / Attachment Button -->
+            <div class="left-actions">
+              <button type="button" class="icon-btn circle-btn" id="attachBtn" title="Add attachment or context">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="12" y1="5" x2="12" y2="19"></line>
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+              </button>
+              <input type="file" id="fileInput" style="display: none;" />
+              <span class="file-tag" id="fileTag"></span>
+            </div>
+
+            <!-- Right: Mode Dropdown + Voice + Send -->
+            <div class="right-actions">
+              <!-- Mode selector dropdown -->
+              <div class="dropdown-wrapper">
+                <button type="button" class="mode-select-btn" id="modeBtn">
+                  <span id="selectedMode">Model</span>
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </button>
+                <div class="mode-dropdown-menu" id="modeMenu">
+                  <div class="dropdown-item active" data-mode="Build">chat Bot</div>
+                  <div class="dropdown-item" data-mode="role">Role Base</div>
+                  <div class="dropdown-item" data-mode="temp">Template Base</div>
+                </div>
+              </div>
+
+              <!-- Voice Input Button -->
+              <button type="button" class="icon-btn mic-btn" id="micBtn" title="Speak to input">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
+                  <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+                  <line x1="12" y1="19" x2="12" y2="23"></line>
+                  <line x1="8" y1="23" x2="16" y2="23"></line>
+                </svg>
+              </button>
+
+              <!-- Send Button (reveals or activates on type) -->
+              <button type="button" class="send-btn" id="sendBtn" title="Send prompt">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="12" y1="19" x2="12" y2="5"></line>
+                  <polyline points="5 12 12 5 19 12"></polyline>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -14,6 +14,18 @@
       "destination": "/frontend/api/index.py"
     },
     {
+      "source": "/",
+      "destination": "/frontend/index.html"
+    },
+    {
+      "source": "/style.css",
+      "destination": "/frontend/style.css"
+    },
+    {
+      "source": "/script.js",
+      "destination": "/frontend/script.js"
+    },
+    {
       "source": "/(.*)",
       "destination": "/frontend/$1"
     }

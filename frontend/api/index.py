@@ -1,5 +1,6 @@
 import os
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, Response
+from fastapi.responses import HTMLResponse
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from dotenv import load_dotenv, find_dotenv
@@ -41,8 +42,68 @@ class ChatRequest(BaseModel):
     message: str
 
 
+def get_frontend_file(filename: str):
+    """Find and read frontend static files from multiple potential deployment locations."""
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+    candidates = [
+        os.path.join(base_dir, "..", filename),
+        os.path.join(base_dir, filename),
+        os.path.join(os.getcwd(), "frontend", filename),
+        os.path.join(os.getcwd(), "public", filename),
+        os.path.join(os.getcwd(), filename),
+    ]
+    for path in candidates:
+        if os.path.isfile(path):
+            try:
+                with open(path, "r", encoding="utf-8") as f:
+                    return f.read()
+            except Exception:
+                pass
+    return None
+
+
+# -------------------------------------------------------------
+# Static Frontend Routes (renders the chatbot UI directly)
+# -------------------------------------------------------------
+@app.get("/", response_class=HTMLResponse)
+@app.get("/index.html", response_class=HTMLResponse)
+@app.get("/frontend", response_class=HTMLResponse)
+@app.get("/frontend/", response_class=HTMLResponse)
+@app.get("/frontend/index.html", response_class=HTMLResponse)
+@app.get("/api/index.py", response_class=HTMLResponse)
+@app.get("/frontend/api/index.py", response_class=HTMLResponse)
+async def serve_index():
+    content = get_frontend_file("index.html")
+    if content:
+        return HTMLResponse(content=content)
+    return HTMLResponse("<h2>Chatbot Frontend Loaded</h2><p>index.html not found</p>", status_code=404)
+
+
+@app.get("/style.css")
+@app.get("/frontend/style.css")
+async def serve_style():
+    content = get_frontend_file("style.css")
+    if content:
+        return Response(content=content, media_type="text/css")
+    raise HTTPException(status_code=404, detail="style.css not found")
+
+
+@app.get("/script.js")
+@app.get("/frontend/script.js")
+async def serve_script():
+    content = get_frontend_file("script.js")
+    if content:
+        return Response(content=content, media_type="application/javascript")
+    raise HTTPException(status_code=404, detail="script.js not found")
+
+
+# -------------------------------------------------------------
+# Backend API Routes
+# -------------------------------------------------------------
 @app.get("/api/health")
 @app.get("/health")
+@app.get("/frontend/health")
+@app.get("/frontend/api/health")
 async def health():
     return {
         "status": "ok",
@@ -53,6 +114,10 @@ async def health():
 
 @app.post("/api/chat")
 @app.post("/chat")
+@app.post("/frontend/chat")
+@app.post("/frontend/api/chat")
+@app.post("/api/index.py")
+@app.post("/frontend/api/index.py")
 async def chat(req: ChatRequest):
     global model
 
